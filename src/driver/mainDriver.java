@@ -7,6 +7,8 @@ package driver;
 import widgets.*;
 import arraylistpackage.ArraylistDriver;
 import linkedlistpackage.LinkedListDriver;
+import stackpackage.StackDriver;
+import queuepackage.QueueDriver;
 /**
  *
  * @author FAIZAL
@@ -19,9 +21,8 @@ public class mainDriver {
         System.out.println("2. Program Linkedlist");
         System.out.println("3. Program Queue");
         System.out.println("4. Program Stack");
-        System.out.println("5. Program Hash");
-        System.out.println("6. Profil Kontributor");
-        System.out.println("7. Exit");
+        System.out.println("5. Profil Kontributor");
+        System.out.println("6. Exit");
         System.out.print("Pilih menu [1-7]: ");
         chooseMenu();
     }
@@ -39,15 +40,17 @@ public class mainDriver {
                 ld.run();
                 break;
             case 3:
+                QueueDriver qd = new QueueDriver();
+                qd.run();
                 break;
             case 4:
+                StackDriver sd = new StackDriver();
+                sd.run();
                 break;
             case 5:
-                break;
-            case 6:
                 showAuthor();
                 break;
-            case 7:
+            case 6:
                 CustomSystemInterruptor csi = new CustomSystemInterruptor();
                 csi.exitProgram();
                 break;
