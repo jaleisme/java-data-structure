@@ -29,14 +29,14 @@ public class ArraylistResource {
     }    
 
     public void show(ArrayList<String> alist){
-        System.out.println("\n\nList Data Mahasiswa");
+        System.out.println("\n\nList Antrian Mahasiswa");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }
     }
     
     public void edit(ArrayList<String> alist){
-        System.out.println("\n\nList Data Mahasiswa");
+        System.out.println("\n\nList Antrian Mahasiswa");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }
@@ -54,7 +54,7 @@ public class ArraylistResource {
     }
     
     public void pop(ArrayList<String> alist){
-        System.out.println("\n\nList Data Mahasiswa");
+        System.out.println("\n\nList Antrian Mahasiswa");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }        

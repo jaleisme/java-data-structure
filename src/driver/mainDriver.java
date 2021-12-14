@@ -6,7 +6,7 @@
 package driver;
 import widgets.*;
 import arraylistpackage.ArraylistDriver;
-
+import linkedlistpackage.LinkedListDriver;
 /**
  *
  * @author FAIZAL
@@ -22,7 +22,7 @@ public class mainDriver {
         System.out.println("5. Program Hash");
         System.out.println("6. Profil Kontributor");
         System.out.println("7. Exit");
-        System.out.print("Pilih menu [1-6]: ");
+        System.out.print("Pilih menu [1-7]: ");
         chooseMenu();
     }
     
@@ -35,6 +35,8 @@ public class mainDriver {
                 ad.run();
                 break;
             case 2:
+                LinkedListDriver ld = new LinkedListDriver();
+                ld.run();
                 break;
             case 3:
                 break;
