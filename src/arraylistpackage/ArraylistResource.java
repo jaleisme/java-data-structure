@@ -18,25 +18,25 @@ public class ArraylistResource {
     CustomSystemInterruptor csi = new CustomSystemInterruptor();
     
     public void put(ArrayList<String> alist){
-        System.out.print("\n\nMasukkan jumlah mahasiswa: ");
+        System.out.print("\n\nMasukkan jumlah Peserta Vaksin: ");
         int n = cbr.integerInput();
         for (int i = 0; i < n; i++) {
             String nama = "";
-            System.out.print("Masukkan nama mahasiswa ke-"+(i+1)+": ");
+            System.out.print("Masukkan nama peserta ke-"+(i+1)+": ");
             nama = cbr.stringInput();
             alist.add(nama);
         }
     }    
 
     public void show(ArrayList<String> alist){
-        System.out.println("\n\nList Antrian Mahasiswa");
+        System.out.println("\n\nList Data Peserta Vaksinasi");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }
     }
     
     public void edit(ArrayList<String> alist){
-        System.out.println("\n\nList Antrian Mahasiswa");
+        System.out.println("\n\nList Data Peserta Vaksinasi");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }
@@ -47,14 +47,14 @@ public class ArraylistResource {
             csi.pauseProgram();
         }
         else{
-            System.out.print("Masukkan nama mahasiswa: ");
+            System.out.print("Masukkan nama Peserta Vaksinasi: ");
             String nama = cbr.stringInput();
             alist.set(x, nama);
         }
     }
     
     public void pop(ArrayList<String> alist){
-        System.out.println("\n\nList Antrian Mahasiswa");
+        System.out.println("\n\nList Data Peserta Vaksinasi");
         for (int i = 0; i < alist.size(); i++) {
             System.out.println("["+i+" - "+alist.get(i)+"]");
         }        
@@ -66,7 +66,7 @@ public class ArraylistResource {
         }
         else{
             alist.remove(x);
-            System.out.println("Data mahasiswa berhasil dihapus!");
+            System.out.println("Data peserta Vaksinasi berhasil dihapus!");
         }
     }
 }

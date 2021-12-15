@@ -41,7 +41,7 @@ public class QueueDriver {
     private static void insertQueue(){
         int loopInput = 0;
         String temp = "";
-        System.out.print("Masukkan nama mahasiswa: ");
+        System.out.print("Masukkan nama peserta vaaksinasi: ");
         Scanner input = new Scanner(System.in);
         try{
             temp = input.nextLine();
@@ -53,7 +53,7 @@ public class QueueDriver {
         queue.add(temp);
         counter++;
         temp = String.valueOf(queue.size());
-        System.out.println("Jumlah mahasiswa dalam antrian saat ini adalah "+temp+".");
+        System.out.println("Jumlah peserta vaksinasi dalam antrian saat ini adalah "+temp+".");
         menuProgram();
     }
     private static void removeQueue(){
@@ -61,15 +61,15 @@ public class QueueDriver {
             System.out.println("Antrian kosong!");
         }else{
             String temp = queue.remove();
-            System.out.println("\nMahasiswa atas nama "+temp+" dapat masuk ke ruang bimbingan.");
+            System.out.println("\nPeserta vaksinasi atas nama "+temp+" dapat masuk ke ruang Vaksinasi.");
             counter--;
             temp = String.valueOf(queue.size());
-            System.out.println("Jumlah pemesan dalam mahasiswa saat ini adalah "+temp+".");
+            System.out.println("Jumlah pemesan dalam peserta vaksinasi saat ini adalah "+temp+".");
             menuProgram(); 
         }
     }
     private static void peekQueue(){
-        System.out.println("\nMahasiswa selanjutnya adalah "+queue.peek()+".");
+        System.out.println("\nPeserta vaksinasi selanjutnya adalah "+queue.peek()+".");
         menuProgram();
     }
     private static void exitProgram(){
@@ -85,11 +85,11 @@ public class QueueDriver {
     private static void menuProgram(){
         int loopInput = 0, chosenMenu = 0;
         while(loopInput == 0){
-            System.out.println("\nAntrian Bimbingan Pak Dani");
+            System.out.println("\nAntrian Vaksinasi");
             System.out.println("1. Daftar Antrian");
-            System.out.println("2. Panggil Mahasiswa Berikutnya");
+            System.out.println("2. Panggil Peserta Vaksinasi Berikutnya");
             System.out.println("3. Cek Status Antrian");
-            System.out.println("4. Lihat Mahasiswa Selanjutnya");
+            System.out.println("4. Lihat Peserta Vaksinasi Selanjutnya");
             System.out.println("5. Keluar");
             System.out.print("Pilih menu [1-5] : ");
             Scanner inputMenu = new Scanner(System.in);
@@ -111,7 +111,7 @@ public class QueueDriver {
                 if(status){
                     insertQueue();
                 } else {
-                    System.out.println("Tunggu mahasiswa lain selesai terlebih dahulu.");
+                    System.out.println("Tunggu peserta vaksinasi lain selesai terlebih dahulu.");
                 }
                 break;
             case 2:

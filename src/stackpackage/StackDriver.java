@@ -27,7 +27,7 @@ private static String[] stack = new String[5];
         int loopInput = 0;
         String temp = "";
         while(loopInput == 0){
-            System.out.print("Masukkan nama pasien : ");
+            System.out.print("Masukkan nama vaksin : ");
             CustomBufferedReader cbr = new CustomBufferedReader();
             try{
                 temp = cbr.stringInput();
@@ -44,11 +44,11 @@ private static String[] stack = new String[5];
     //Pop
     private static void popStack(){
         counter--;
-        System.out.println("Pasien yang terakhir diinputkan sudah dihapus!");
+        System.out.println("vaksin yang terakhir diinputkan sudah dihapus!");
     }
     
     private static void showStack(){
-        System.out.println("Pasien dalam Antrian: ");
+        System.out.println("vaksin dalam Antrian: ");
         if(counter > -1){
             for (int i = 0; i < counter; i++) {
                 System.out.println("["+i+" => "+stack[i]+"]");
@@ -77,11 +77,11 @@ private static String[] stack = new String[5];
         int loopInput = 0, chosenMenu = 0;
         while(loopInput == 0){
             System.out.println("\n\nAntrian Pasien");
-            System.out.println("1. Tambah Pasien");
-            System.out.println("2. Hapus Pasien");
-            System.out.println("3. Cek Status Antrian");
-            System.out.println("4. Lihat Antrian");
-            System.out.println("5. Reset Antrian");
+            System.out.println("1. Tambah Vaksin");
+            System.out.println("2. Hapus Vaksin");
+            System.out.println("3. Cek Status Stock Vaksin");
+            System.out.println("4. Lihat Stock Vaksin");
+            System.out.println("5. Reset Stock Vaksin");
             System.out.println("6. Keluar dari Program");
             System.out.print("Pilih menu [1-6] : ");
             Scanner inputMenu = new Scanner(System.in);
@@ -104,14 +104,14 @@ private static String[] stack = new String[5];
                 if(status){
                     pushStack();
                 } else {
-                    System.out.println("Antrian penuh! Kosongkan antrian terlebih dahulu.");
+                    System.out.println("Stock penuh! Kosongkan stock terlebih dahulu.");
                 }
                 break;
             case 2:
                 popStack();
                 break;
             case 3:
-                System.out.println("Status Antrian");
+                System.out.println("Status Stock");
                 System.out.println("Kapasitas\t: "+stack.length);
                 System.out.println("Terisi\t\t: "+counter);
                 break;

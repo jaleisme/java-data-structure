@@ -13,26 +13,25 @@ import java.util.Scanner;
 import widgets.CustomBufferedReader;
 
 /**
- *
- * @author MATTHEWS SULLIVAN
+ *b
  */
 public class LinkedListDriver {
     public static LinkedList<String> priceList = new LinkedList<>();
     public static int n;
     
     public static void search(){
-        System.out.print("\n\nMasukkan nama barang: ");
+        System.out.print("\n\nMasukkan nama Vaksin: ");
         CustomBufferedReader cbr = new CustomBufferedReader();
         String name = cbr.stringInput();
         boolean status = false;
         for (int i = 0; i < n; i++) {
             if(priceList.get(i).equals(name)){
-                System.out.println("\n\nData found in index "+i);
+                System.out.println("\n\nData berada pada index "+i);
                 status = true;
             }
         }
         if(status = false){
-            System.out.println("\n\nData not found!");
+            System.out.println("\n\nData Tidak Ditemukan!");
         }
         showMenu();
     }
@@ -48,7 +47,7 @@ public class LinkedListDriver {
         for (int i = 0; i < n; i++) {            
             int loopInput = 0;
             String temp = "";
-            System.out.print("\n\nMasukkan  harga pembanding\nFormat: [harga_nama barang]: ");
+            System.out.print("\n\nMasukkan  harga pembanding\nFormat: [harga_nama Vaksin]: ");
             temp = cbr.stringInput();
             priceList.add(temp);
         }

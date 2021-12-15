@@ -21,10 +21,10 @@ public class ArraylistDriver {
     
     public void showMenu(){
         System.out.println("\n\nProgram Arraylist");
-        System.out.println("1. Tambah Mahasiswa");
-        System.out.println("2. Lihat Antrian Mahasiswa");
-        System.out.println("3. Edit Antrian Mahasiswa");
-        System.out.println("4. Hapus Mahasiswa dari Antrian");
+        System.out.println("1. Tambah Peserta");
+        System.out.println("2. Lihat Data Peserta");
+        System.out.println("3. Edit Data Peserta");
+        System.out.println("4. Hapus Data Peserta");
         System.out.println("5. Keluar dari program");
         System.out.print("Pilih menu [1-5]: ");
         chooseMenu();
