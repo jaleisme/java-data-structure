@@ -5,12 +5,10 @@
  */
 package linkedlistpackage;
 
-import driver.mainDriver;
-import static driver.mainDriver.showMenu;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.Scanner;
-import widgets.CustomBufferedReader;
+import widgets.*;
 
 /**
  *b
@@ -72,20 +70,29 @@ public class LinkedListDriver {
         showMenu();
     }
     
+    public static void delete(){
+        System.out.println("\n\nMenghapus barang '"+priceList.peek()+"'");
+        priceList.pop();
+        System.out.println("Data berhasil dihapus!");
+        showMenu();
+    }
+    
     public static void showMenu(){
-        System.out.println("\n\nProgram Pembanding Harga");
-        System.out.println("1. Tambah Harga Vaksin");
-        System.out.println("2. Tampilkan List Harga");
+        System.out.println("\n\nInventory Away");
+        System.out.println("1. Tambah Barang");
+        System.out.println("2. Tampilkan List Barang");
         System.out.println("3. Urutkan dari yang paling murah");
         System.out.println("4. Urutkan dari yang paling mahal");
         System.out.println("5. Cari Harga Perbandingan");
-        System.out.println("6. Keluar dari Program");
-        System.out.print("Pilih menu [1-6]: ");
+        System.out.println("6. Hapus Data Barang");
+        System.out.println("7. Keluar dari Program");
+        System.out.print("Pilih menu [1-7]: ");
         chooseMenu();
     }
     
     public static void chooseMenu(){
         CustomBufferedReader cbr = new CustomBufferedReader();
+        CustomSystemInterruptor csi = new CustomSystemInterruptor();
         int choice = cbr.integerInput();
         switch(choice){
             case 1:
@@ -104,8 +111,10 @@ public class LinkedListDriver {
                 search();
                 break;
             case 6:
-                mainDriver md = new mainDriver();
-                md.showMenu();
+                delete();
+                break;
+            case 7:
+                csi.exitProgram();
                 break;
             default:
                 showMenu();
