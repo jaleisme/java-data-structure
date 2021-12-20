@@ -74,7 +74,7 @@ public class LinkedListDriver {
     
     public static void showMenu(){
         System.out.println("\n\nProgram Pembanding Harga");
-        System.out.println("1. Tambah Harga Perbandingan");
+        System.out.println("1. Tambah Harga Vaksin");
         System.out.println("2. Tampilkan List Harga");
         System.out.println("3. Urutkan dari yang paling murah");
         System.out.println("4. Urutkan dari yang paling mahal");
@@ -113,7 +113,7 @@ public class LinkedListDriver {
         }
     }
     
-    public void run() {       
+    public static void main(String[] args) {       
         showMenu();
     }
 }
